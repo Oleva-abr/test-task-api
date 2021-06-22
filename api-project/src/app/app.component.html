@@ -8,3 +8,9 @@
   </nav>
   <router-outlet></router-outlet>
 </div>
+Artworks name: <input type="text" [(ngModel)]="artworksName" />
+<button (click)="search()">Search</button>
+<div *ngIf="response">
+  <img src="{{ response.data.api_link }}" alt="art" />
+  <p>{{ response.data.title }}</p>
+</div>

@@ -9,6 +9,8 @@ import { DescriptionComponent } from './description/description.component';
 import { CategoryComponent } from './category/category.component';
 import { AuthorComponent } from './author/author.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NewServiceService } from './new-service.service';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,8 +29,13 @@ const appRoutes: Routes = [
     AuthorComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule,
+  ],
+  providers: [NewServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
