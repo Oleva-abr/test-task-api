@@ -1,16 +1,15 @@
 <div>
-  <h1>Artworks</h1>
-  <nav>
-    <a routerLink="">Home</a>
-    <a routerLink="/description">Description</a>
-    <a routerLink="/category">Category</a>
-    <a routerLink="/author">Author</a>
+  <nav class="nav">
+    <a routerLink="" class="nav-link">Home</a>
+    <a routerLink="/description" class="nav-link">Description</a>
+    <a routerLink="/category" class="nav-link">Category</a>
+    <a routerLink="/author" class="nav-link">Author</a>
   </nav>
+  Artworks name: <input type="text" [(ngModel)]="artworksName" />
+  <button (click)="search()">Search</button>
+  <div *ngIf="response">
+    <img src="{{ response.data.api_link }}" alt="art" />
+    <p>{{ response.data.title }}</p>
+  </div>
   <router-outlet></router-outlet>
-</div>
-Artworks name: <input type="text" [(ngModel)]="artworksName" />
-<button (click)="search()">Search</button>
-<div *ngIf="response">
-  <img src="{{ response.data.api_link }}" alt="art" />
-  <p>{{ response.data.title }}</p>
 </div>
