@@ -5,11 +5,11 @@
     <a routerLink="/category" class="nav-link">Category</a>
     <a routerLink="/author" class="nav-link">Author</a>
   </nav>
-  Artworks name: <input type="text" [(ngModel)]="artworksName" />
+  <input type="text" [(ngModel)]="artworksName" placeholder="Enter artwork" />
   <button (click)="search()">Search</button>
   <div *ngIf="response">
-    <img src="{{ response.data.api_link }}" alt="art" />
     <p>{{ response.data.title }}</p>
+    <p>{{ response.data.alt_text }}</p>
   </div>
   <router-outlet></router-outlet>
 </div>

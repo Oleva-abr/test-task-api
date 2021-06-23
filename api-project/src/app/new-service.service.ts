@@ -17,10 +17,11 @@ export interface ArtWorks {
 export class NewServiceService {
   public art: ArtWorks[] = [];
   constructor(private http: HttpClient) {}
-  fetchTodos(): Observable<ArtWorks[]> {
+  fetchArts(): Observable<ArtWorks[]> {
     return this.http
       .get<ArtWorks[]>(
-        'https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display'
+        // 'https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display'
+        'https://api.artic.edu/api/v1/artworks'
       )
       .pipe(tap((art) => (this.art = art)));
   }

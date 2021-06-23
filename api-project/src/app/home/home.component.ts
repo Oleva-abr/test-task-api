@@ -1,3 +1,4 @@
+import { NewServiceService } from './../new-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(public arts: NewServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.arts.fetchArts();
+  }
 }

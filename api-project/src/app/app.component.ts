@@ -14,7 +14,7 @@ export class AppComponent {
   search() {
     this.http
       .get(
-        `https://api.artic.edu/api/v1/artworks/search?q=${this.artworksName}&fields=title`
+        `https://api.artic.edu/api/v1/artworks/search?q=${this.artworksName}`
       )
       .subscribe((response) => {
         this.response = response;
