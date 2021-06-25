@@ -14,7 +14,6 @@ export class CategoryComponent implements OnInit {
       categories = Object.entries(categories);
       categories = categories[1];
       this.categories = categories[1];
-      console.log(categories);
     });
   }
 

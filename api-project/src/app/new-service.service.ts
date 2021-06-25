@@ -6,8 +6,7 @@ export interface ArtWorks {
   id: number;
   title: string;
   category_titles: string;
-  description: string;
-
+  inscriptions: string;
   artist_title: string;
 }
 
@@ -29,6 +28,11 @@ export class NewServiceService {
   getCategory(): Observable<any[]> {
     return this.http.get<any>(
       this.APIUrl + '/artworks?fields=title,category_titles'
+    );
+  }
+  getDescription(): Observable<any[]> {
+    return this.http.get<any>(
+      this.APIUrl + '/artworks?fields=title,inscriptions'
     );
   }
 }
