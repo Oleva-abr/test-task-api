@@ -18,7 +18,7 @@ export class AppComponent {
       )
       .subscribe((response) => {
         this.response = response;
-        console.log(this.response);
+        // console.log(this.response);
       });
   }
 }

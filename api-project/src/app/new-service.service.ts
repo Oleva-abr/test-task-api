@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 export interface ArtWorks {
   id: number;
@@ -15,14 +14,13 @@ export interface ArtWorks {
   providedIn: 'root',
 })
 export class NewServiceService {
-  public art: ArtWorks[] = [];
-  constructor(private http: HttpClient) {}
-  fetchArts(): Observable<ArtWorks[]> {
-    return this.http
-      .get<ArtWorks[]>(
-        // 'https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display'
-        'https://api.artic.edu/api/v1/artworks'
-      )
-      .pipe(tap((art) => (this.art = art)));
+  readonly APIUrl = 'https://api.artic.edu/api/v1';
+  constructor(public http: HttpClient) {}
+
+  getArtList(): Observable<any[]> {
+    return this.http.get<any>(this.APIUrl + '/artworks?fields=title');
+  }
+  getArtist(): Observable<any[]> {
+    return this.http.get<any>(this.APIUrl + '/artists');
   }
 }
