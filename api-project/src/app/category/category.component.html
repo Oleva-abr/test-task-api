@@ -1,1 +1,7 @@
-<h3>Category</h3>
+<h3>Author</h3>
+<ul>
+  <li *ngFor="let item of categories">
+    <p>{{ item.category_titles }}</p>
+    <p>{{ item.title }}</p>
+  </li>
+</ul>

@@ -5,9 +5,10 @@ import { Observable } from 'rxjs';
 export interface ArtWorks {
   id: number;
   title: string;
-  category: string;
+  category_titles: string;
   description: string;
-  author: string;
+
+  artist_title: string;
 }
 
 @Injectable({
@@ -23,6 +24,11 @@ export class NewServiceService {
   getArtist(): Observable<any[]> {
     return this.http.get<any>(
       this.APIUrl + '/artworks?fields=title,artist_title'
+    );
+  }
+  getCategory(): Observable<any[]> {
+    return this.http.get<any>(
+      this.APIUrl + '/artworks?fields=title,category_titles'
     );
   }
 }

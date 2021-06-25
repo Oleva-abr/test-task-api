@@ -16,7 +16,6 @@ export class AuthorComponent implements OnInit {
       authors = Object.entries(authors);
       authors = authors[1];
       this.authors = authors[1];
-      console.log(authors);
     });
   }
 }
