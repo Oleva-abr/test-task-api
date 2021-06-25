@@ -9,7 +9,6 @@
   <button (click)="search()">Search</button>
   <div *ngIf="response">
     <p>{{ response.data.title }}</p>
-    <p>{{ response.data.alt_text }}</p>
   </div>
   <router-outlet></router-outlet>
 </div>

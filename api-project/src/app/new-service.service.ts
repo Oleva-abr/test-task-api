@@ -21,6 +21,8 @@ export class NewServiceService {
     return this.http.get<any>(this.APIUrl + '/artworks?fields=title');
   }
   getArtist(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + '/artists');
+    return this.http.get<any>(
+      this.APIUrl + '/artworks?fields=title,artist_title'
+    );
   }
 }
