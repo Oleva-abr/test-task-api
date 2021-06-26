@@ -1,6 +1,7 @@
 <h3>Artworks</h3>
+<input type="text" [(ngModel)]="searchStr" placeholder="Filter" />
 <ul>
-  <li *ngFor="let item of artworks">
+  <li *ngFor="let item of artworks | searchArts: searchStr">
     <a [routerLink]="['/details', item.id]"
       ><p>{{ item.title }}</p></a
     >

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtWorks } from '../shared/new-service.service';
-import { NewServiceService } from '../shared/new-service.service';
+import { ArtWorks } from '../shared/servises/new-service.service';
+import { NewServiceService } from '../shared/servises/new-service.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Details, DetailsService } from '../shared/details.servise';
+import { Details, DetailsService } from '../shared/servises/details.servise';
 
 @Component({
   selector: 'app-details',

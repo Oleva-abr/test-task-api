@@ -9,9 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { AuthorComponent } from './author/author.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewServiceService } from './shared/new-service.service';
+import { NewServiceService } from './shared/servises/new-service.service';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { SearchPipe } from './shared/search.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     AuthorComponent,
     NotFoundComponent,
     DetailsComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

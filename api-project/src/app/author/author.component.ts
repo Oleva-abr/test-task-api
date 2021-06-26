@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NewServiceService } from '../shared/new-service.service';
-import { ArtWorks } from '../shared/new-service.service';
+import { NewServiceService } from '../shared/servises/new-service.service';
+import { ArtWorks } from '../shared/servises/new-service.service';
 
 @Component({
   selector: 'app-author',

@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   artworksName: string = '';
   response: any;
+  
   constructor(private http: HttpClient) {}
   search() {
     this.http
