@@ -15,7 +15,7 @@ import { DetailsComponent } from './details/details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/:id', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'category', component: CategoryComponent },
   { path: 'author', component: AuthorComponent },
   { path: '**', component: NotFoundComponent },
@@ -25,7 +25,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-
     CategoryComponent,
     AuthorComponent,
     NotFoundComponent,

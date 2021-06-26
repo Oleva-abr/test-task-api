@@ -18,7 +18,7 @@ export class NewServiceService {
   constructor(public http: HttpClient) {}
 
   getArtList(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + '/artworks?fields=title');
+    return this.http.get<any>(this.APIUrl + '/artworks?fields=title,id');
   }
   getArtist(): Observable<any[]> {
     return this.http.get<any>(
