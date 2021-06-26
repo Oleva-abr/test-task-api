@@ -1,9 +1,21 @@
 <div>
   <nav class="nav">
-    <a routerLink="" class="nav-link">Home</a>
-    <a routerLink="/description" class="nav-link">Description</a>
-    <a routerLink="/category" class="nav-link">Category</a>
-    <a routerLink="/author" class="nav-link">Author</a>
+    <a
+      routerLink=""
+      class="nav-link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="/details" class="nav-link" routerLinkActive="active">
+      Details</a
+    >
+    <a routerLink="/category" class="nav-link" routerLinkActive="active"
+      >Category</a
+    >
+    <a routerLink="/author" class="nav-link" routerLinkActive="active"
+      >Author</a
+    >
   </nav>
   <input type="text" [(ngModel)]="artworksName" placeholder="Enter artwork" />
   <button (click)="search()">Search</button>

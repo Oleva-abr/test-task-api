@@ -12,3 +12,6 @@
 .nav-link:focus {
   color: cornflowerblue;
 }
+.active {
+  color: cornflowerblue;
+}

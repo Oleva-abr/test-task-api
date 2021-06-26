@@ -5,16 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DescriptionComponent } from './description/description.component';
+
 import { CategoryComponent } from './category/category.component';
 import { AuthorComponent } from './author/author.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NewServiceService } from './new-service.service';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'description', component: DescriptionComponent },
+  { path: '/:id', component: DetailsComponent },
   { path: 'category', component: CategoryComponent },
   { path: 'author', component: AuthorComponent },
   { path: '**', component: NotFoundComponent },
@@ -24,10 +25,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DescriptionComponent,
+
     CategoryComponent,
     AuthorComponent,
     NotFoundComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
