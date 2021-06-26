@@ -4,9 +4,15 @@
   border: 1px solid cornflowerblue;
   border-radius: 4px;
   resize: vertical;
+  margin-left: 2rem;
+  font-size: 20px;
 }
 .list {
   list-style: none;
   color: darkblue;
   font-size: 20px;
+}
+.header {
+  margin-left: 2rem;
+  color: darkblue;
 }

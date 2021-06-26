@@ -1,4 +1,4 @@
-<h3>Artworks</h3>
+<h3 class="header">Artworks</h3>
 <input type="text" [(ngModel)]="searchStr" placeholder="Search" class="input" />
 <ul class="list">
   <li *ngFor="let item of artworks | searchArts: searchStr">

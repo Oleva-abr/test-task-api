@@ -4,6 +4,8 @@
   border: 1px solid cornflowerblue;
   border-radius: 4px;
   resize: vertical;
+  margin-left: 2rem;
+  font-size: 20px;
 }
 .list {
   list-style: none;
@@ -16,4 +18,8 @@
 .link:focus,
 .link:hover {
   color: cornflowerblue;
+}
+.header {
+  margin-left: 2rem;
+  color: darkblue;
 }
