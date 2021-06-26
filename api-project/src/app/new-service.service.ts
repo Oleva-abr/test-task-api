@@ -8,6 +8,8 @@ export interface ArtWorks {
   category_titles: string;
   inscriptions: string;
   artist_title: string;
+  date_display: string;
+  image_id: string;
 }
 
 @Injectable({
@@ -30,9 +32,10 @@ export class NewServiceService {
       this.APIUrl + '/artworks?fields=title,category_titles'
     );
   }
-  getDescription(): Observable<any[]> {
+  getDetails(): Observable<any[]> {
     return this.http.get<any>(
-      this.APIUrl + '/artworks?fields=title,inscriptions'
+      this.APIUrl +
+        '/artworks/?fields=id,title,inscriptions,date_display,image_id'
     );
   }
 }

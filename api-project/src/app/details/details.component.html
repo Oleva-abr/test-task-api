@@ -1,5 +1,16 @@
 <div>
   <button>back</button>
-  <h2>Details</h2>
-  <p>Some text</p>
+  <ul>
+    <li *ngFor="let item of details">
+      <img
+        src="https://www.artic.edu/iiif/2/{{
+          item.image_id
+        }}/full/843,/0/default.jpg"
+        alt="art"
+      />
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.date_display }}</p>
+      <p>{{ item.inscriptions }}</p>
+    </li>
+  </ul>
 </div>

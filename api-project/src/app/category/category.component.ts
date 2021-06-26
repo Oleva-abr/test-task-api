@@ -9,13 +9,13 @@ import { NewServiceService } from './../new-service.service';
 })
 export class CategoryComponent implements OnInit {
   categories: ArtWorks[] = [];
-  constructor(public categoryList: NewServiceService) {
+  constructor(public categoryList: NewServiceService) {}
+
+  ngOnInit(): void {
     this.categoryList.getCategory().subscribe((categories) => {
       categories = Object.entries(categories);
       categories = categories[1];
       this.categories = categories[1];
     });
   }
-
-  ngOnInit(): void {}
 }
