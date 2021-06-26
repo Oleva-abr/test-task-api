@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { AuthorComponent } from './author/author.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewServiceService } from './new-service.service';
+import { NewServiceService } from './shared/new-service.service';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 

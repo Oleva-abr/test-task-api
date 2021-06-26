@@ -8,6 +8,6 @@ export class DetailsService {
   det: Details[] = [];
 
   getById(id: number) {
-    return this.det.find((d) => d.id === id);
+    this.det.find((d) => d.id === id);
   }
 }
