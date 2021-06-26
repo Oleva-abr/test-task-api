@@ -1,7 +1,12 @@
 <h3>Author</h3>
-<ul>
-  <li *ngFor="let item of authors">
-    <p>{{ item.title }}</p>
+<input
+  type="text"
+  [(ngModel)]="searchArtist"
+  placeholder="Search"
+  class="input"
+/>
+<ul class="list">
+  <li *ngFor="let item of authors | searchAuthor: searchArtist">
     <p>{{ item.artist_title }}</p>
   </li>
 </ul>

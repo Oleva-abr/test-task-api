@@ -1,0 +1,19 @@
+.input {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  resize: vertical;
+}
+.list {
+  list-style: none;
+  font-size: 20px;
+}
+.link {
+  text-decoration: none;
+  color: darkblue;
+}
+.link:focus,
+.link:hover {
+  color: cornflowerblue;
+}

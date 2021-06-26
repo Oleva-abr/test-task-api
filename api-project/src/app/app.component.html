@@ -15,11 +15,6 @@
       >Author</a
     >
   </nav>
-  <input type="text" [(ngModel)]="artworksName" placeholder="Enter artwork" />
-  <button (click)="search()">Search</button>
 
-  <div *ngIf="response">
-    <p>{{ response.data.title }}</p>
-  </div>
   <router-outlet></router-outlet>
 </div>

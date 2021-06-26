@@ -8,6 +8,7 @@ import { ArtWorks } from '../shared/servises/new-service.service';
   styleUrls: ['./author.component.css'],
 })
 export class AuthorComponent implements OnInit {
+  searchArtist: string = '';
   authors: ArtWorks[] = [];
   constructor(public authorList: NewServiceService) {}
 

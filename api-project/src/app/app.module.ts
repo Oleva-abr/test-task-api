@@ -13,6 +13,7 @@ import { NewServiceService } from './shared/servises/new-service.service';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { SearchPipe } from './shared/search.pipe';
+import { AuthorsSearchPipe } from './shared/authors-search.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     NotFoundComponent,
     DetailsComponent,
     SearchPipe,
+    AuthorsSearchPipe,
   ],
   imports: [
     BrowserModule,
