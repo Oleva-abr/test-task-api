@@ -37,7 +37,4 @@ export class NewServiceService {
         '/artworks/?fields=id,title,inscriptions,date_display,image_id'
     );
   }
-  getById(id: number) {
-    this.det.find((d) => d.id === id);
-  }
 }

@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 export class DetailsComponent implements OnInit {
   details: ArtWorks[] = [];
   art$!: Observable<ArtWorks>;
+  arr: [] = [];
 
   constructor(
     public detailsList: NewServiceService,
@@ -22,12 +23,14 @@ export class DetailsComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.art$ = params.id;
     });
-    console.log(this.art$);
+
     this.detailsList.getDetails().subscribe((details) => {
       details = Object.entries(details);
       details = details[1];
-      this.details = details[1];
-      console.log(details);
+      details = details[1];
+      details = details.find((item) => item.id == this.art$);
+      details = [details];
+      this.details = details;
     });
   }
 }

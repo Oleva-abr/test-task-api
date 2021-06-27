@@ -2,6 +2,9 @@
   list-style: none;
 }
 button {
-  background-color: cornflowerblue;
   font-size: 20px;
+  margin-left: 40px;
+}
+.text {
+  color: darkblue;
 }
