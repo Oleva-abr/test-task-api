@@ -17,6 +17,7 @@ export interface ArtWorks {
 })
 export class NewServiceService {
   readonly APIUrl = 'https://api.artic.edu/api/v1';
+  det: ArtWorks[] = [];
   constructor(public http: HttpClient) {}
 
   getArtList(): Observable<any[]> {
@@ -35,5 +36,8 @@ export class NewServiceService {
       this.APIUrl +
         '/artworks/?fields=id,title,inscriptions,date_display,image_id'
     );
+  }
+  getById(id: number) {
+    this.det.find((d) => d.id === id);
   }
 }

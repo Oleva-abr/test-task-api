@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArtWorks } from '../shared/servises/new-service.service';
 import { NewServiceService } from '../shared/servises/new-service.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Details, DetailsService } from '../shared/servises/details.servise';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-details',
@@ -11,17 +11,16 @@ import { Details, DetailsService } from '../shared/servises/details.servise';
 })
 export class DetailsComponent implements OnInit {
   details: ArtWorks[] = [];
-  det: Details[] = [];
+  art$: Observable<ArtWorks> | undefined;
   constructor(
     public detailsList: NewServiceService,
-    private route: ActivatedRoute,
-    private router: Router,
-    private detailsService: DetailsService
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      return this.detailsService.getById(+params.id);
+      console.log(params);
+      return this.detailsList.getById(+params.id);
     });
     this.detailsList.getDetails().subscribe((details) => {
       details = Object.entries(details);

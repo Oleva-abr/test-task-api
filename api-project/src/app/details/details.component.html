@@ -8,6 +8,7 @@
           item.image_id
         }}/full/843,/0/default.jpg"
         alt="art"
+        width="400"
       />
       <h3>{{ item.title }}</h3>
       <p>{{ item.date_display }}</p>
@@ -15,3 +16,9 @@
     </li>
   </ul>
 </div>
+<!-- <div *ngIf="art$ | async as art; else loading">
+  <p>{{ art.title }}</p>
+</div>
+<ng-template #loading>
+  <p class="text-center">Загружаю пост...</p>
+</ng-template> -->

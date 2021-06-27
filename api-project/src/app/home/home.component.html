@@ -3,7 +3,6 @@
 <ul class="list">
   <li *ngFor="let item of artworks | searchArts: searchStr">
     <a [routerLink]="['/details', item.id]" class="link">
-      <!-- <p>(ID {{ item.id }})</p> -->
       <p>{{ item.title }}</p></a
     >
   </li>
