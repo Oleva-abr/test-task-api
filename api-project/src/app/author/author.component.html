@@ -6,7 +6,14 @@
   class="input"
 />
 <ul class="list">
-  <li *ngFor="let item of authors | searchAuthor: searchArtist">
-    <p>{{ item.artist_title }}</p>
+  <li *ngFor="let item of authors | searchAuthor: searchArtist" class="card">
+    <h3>{{ item.artist_title }}</h3>
+    <img
+      src="https://www.artic.edu/iiif/2/{{
+        item.image_id
+      }}/full/843,/0/default.jpg"
+      alt="art"
+      width="300"
+    />
   </li>
 </ul>

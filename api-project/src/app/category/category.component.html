@@ -1,7 +1,12 @@
 <h2 class="header">Category</h2>
-<ul>
-  <li *ngFor="let item of categories" class="list">
-    <p>{{ item.category_titles }}</p>
-    <p>{{ item.title }}</p>
+<ul class="list">
+  <li *ngFor="let item of categories" class="card">
+    <h3>{{ item.category_titles }}</h3>
+    <img
+      src="https://www.artic.edu/iiif/2/{{
+        item.image_id
+      }}/full/843,/0/default.jpg"
+      alt="art"
+    />
   </li>
 </ul>

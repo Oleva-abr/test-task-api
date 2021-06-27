@@ -1,9 +1,14 @@
 <h2 class="header">Artworks</h2>
 <input type="text" [(ngModel)]="searchStr" placeholder="Search" class="input" />
 <ul class="list">
-  <li *ngFor="let item of artworks | searchArts: searchStr">
+  <li *ngFor="let item of artworks | searchArts: searchStr" class="card">
     <a [routerLink]="['/details', item.id]" class="link">
-      <p>{{ item.title }}</p></a
-    >
+      <h3>{{ item.title }}</h3>
+      <img
+        src="https://www.artic.edu/iiif/2/{{
+          item.image_id
+        }}/full/843,/0/default.jpg"
+        alt="art"
+    /></a>
   </li>
 </ul>

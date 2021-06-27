@@ -21,14 +21,18 @@ export class NewServiceService {
   constructor(public http: HttpClient) {}
 
   getArtList(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + '/artworks?fields=title,id');
+    return this.http.get<any>(
+      this.APIUrl + '/artworks?fields=title,id,image_id'
+    );
   }
   getArtist(): Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + '/artworks?fields=artist_title');
+    return this.http.get<any>(
+      this.APIUrl + '/artworks?fields=artist_title,image_id'
+    );
   }
   getCategory(): Observable<any[]> {
     return this.http.get<any>(
-      this.APIUrl + '/artworks?fields=title,category_titles?page=2&limit=15'
+      this.APIUrl + '/artworks?fields=title,category_titles,image_id'
     );
   }
   getDetails(): Observable<any[]> {

@@ -10,9 +10,34 @@
 .list {
   list-style: none;
   color: darkblue;
-  font-size: 20px;
+   display: flex;
+  flex-wrap: wrap;
 }
 .header {
   margin-left: 2rem;
   color: darkblue;
+}
+
+.card {
+  padding: 5px;
+  margin: 15px;
+  width: calc((100% - 250px) / 3);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(21, 20, 22, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
 }
