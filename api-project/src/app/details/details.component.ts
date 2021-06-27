@@ -27,6 +27,7 @@ export class DetailsComponent implements OnInit {
       details = Object.entries(details);
       details = details[1];
       this.details = details[1];
+      console.log(details);
     });
   }
 }

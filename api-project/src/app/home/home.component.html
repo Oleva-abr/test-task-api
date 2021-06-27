@@ -1,9 +1,10 @@
-<h3 class="header">Artworks</h3>
+<h2 class="header">Artworks</h2>
 <input type="text" [(ngModel)]="searchStr" placeholder="Search" class="input" />
 <ul class="list">
   <li *ngFor="let item of artworks | searchArts: searchStr">
-    <a [routerLink]="['/details', item.id]" class="link"
-      ><p>{{ item.title }}</p></a
+    <a [routerLink]="['/details', item.id]" class="link">
+      <!-- <p>(ID {{ item.id }})</p> -->
+      <p>{{ item.title }}</p></a
     >
   </li>
 </ul>

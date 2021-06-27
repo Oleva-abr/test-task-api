@@ -20,9 +20,7 @@ export class NewServiceService {
   constructor(public http: HttpClient) {}
 
   getArtList(): Observable<any[]> {
-    return this.http.get<any>(
-      this.APIUrl + '/artworks?fields=title,id?page=2&limit=15'
-    );
+    return this.http.get<any>(this.APIUrl + '/artworks?fields=title,id');
   }
   getArtist(): Observable<any[]> {
     return this.http.get<any>(this.APIUrl + '/artworks?fields=artist_title');
