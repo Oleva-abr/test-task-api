@@ -1,18 +1,23 @@
-<div>
+<div class="content">
   <button routerLink="">X</button>
 
   <ul class="list">
-    <li *ngFor="let item of details">
-      <img
-        src="https://www.artic.edu/iiif/2/{{
-          item.image_id
-        }}/full/843,/0/default.jpg"
-        alt="art"
-        width="500"
-      />
-      <h3 class="text">{{ item.title }}</h3>
-      <p class="text">{{ item.date_display }}</p>
-      <p class="text">{{ item.inscriptions }}</p>
+    <li *ngFor="let item of details" class="card">
+      <div class="image-overlay">
+        <img
+          src="https://www.artic.edu/iiif/2/{{
+            item.image_id
+          }}/full/843,/0/default.jpg"
+          alt="art"
+          width="500"
+        />
+      </div>
+      <div class="card-info">
+        <h3 class="text">{{ item.title }}</h3>
+        <p class="text">{{ item.date_display }}</p>
+        <p class="text">{{ item.inscriptions }}</p>
+        <p class="text">{{ item.publication_history }}</p>
+      </div>
     </li>
   </ul>
 </div>

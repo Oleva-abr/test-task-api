@@ -10,6 +10,7 @@ export interface ArtWorks {
   artist_title: string;
   date_display: string;
   image_id: string;
+  publication_history: string;
 }
 
 @Injectable({
@@ -38,7 +39,7 @@ export class NewServiceService {
   getDetails(): Observable<any[]> {
     return this.http.get<any>(
       this.APIUrl +
-        '/artworks/?fields=id,title,inscriptions,date_display,image_id'
+        '/artworks/?fields=id,title,inscriptions,date_display,image_id,publication_history'
     );
   }
 }
